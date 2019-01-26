@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+word counting
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1> Word Countting! </h1>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="{%url 'about'%}">ABOUT</a>
+        </li>
+    </ul>
+
+    <form action="{%url 'result'%}">
+        <div class="form-group">
+            <textarea class="form-control" cols="30" rows="15" name="fulltext"></textarea>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Count!</button>
+    </form>
+</div>
+{% endblock %}
